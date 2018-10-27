@@ -1,11 +1,10 @@
 FROM node:10.12.0-alpine AS fetch
 
-ENV NODECG_TAG=v1.1.3
+ENV NODECG_TAG v1.1.3
 
-RUN apk --no-cache add curl
+ADD https://github.com/nodecg/nodecg/archive/${NODECG_TAG}.tar.gz ./nodecg.tar.gz
 
 RUN mkdir -p extracted \
-	&& curl -fsL https://github.com/nodecg/nodecg/archive/${NODECG_TAG}.tar.gz > ./nodecg.tar.gz \
 	&& tar xzf ./nodecg.tar.gz -C ./extracted \
 	&& mv ./extracted/* /nodecg
 
