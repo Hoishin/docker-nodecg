@@ -18,6 +18,7 @@ COPY --from=fetch /nodecg/lib /nodecg/lib
 COPY --from=fetch /nodecg/src /nodecg/src
 COPY --from=fetch /nodecg/schemas /nodecg/schemas
 COPY --from=fetch /nodecg/build /nodecg/build
+COPY --from=fetch /nodecg/types /nodecg/types
 COPY --from=fetch /nodecg/bower.json /nodecg/index.js /nodecg/package.json /nodecg/
 
 RUN npm install --global bower \
