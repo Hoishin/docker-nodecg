@@ -1,6 +1,6 @@
 FROM node:10-alpine AS fetch
 
-ENV NODECG_TAG master
+ENV NODECG_TAG v1.1.3
 
 ADD https://github.com/nodecg/nodecg/archive/${NODECG_TAG}.tar.gz ./nodecg.tar.gz
 
