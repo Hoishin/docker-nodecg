@@ -1,4 +1,4 @@
-FROM node:10.12.0-alpine AS fetch
+FROM node:10-alpine AS fetch
 
 ENV NODECG_TAG master
 
@@ -8,7 +8,7 @@ RUN mkdir -p extracted \
 	&& tar xzf ./nodecg.tar.gz -C ./extracted \
 	&& mv ./extracted/* /nodecg
 
-FROM node:10.12.0-alpine AS image
+FROM node:10-alpine AS image
 
 RUN apk --no-cache add git
 
