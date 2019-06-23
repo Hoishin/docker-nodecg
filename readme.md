@@ -1,8 +1,5 @@
 # docker-nodecg
-[![Build Status](https://travis-ci.com/Hoishin/docker-nodecg.svg?branch=master)](https://travis-ci.com/Hoishin/docker-nodecg)
 
-This repository hosts Dockerfile to build NodeCG images.
+This repository hosts Dockerfile to build NodeCG images based on `node:10-alpine`, intended to be used in production.
 
-https://hub.docker.com/r/hoishin/nodecg/
-
-Currently Node.js v10 alpine only.
+https://hub.docker.com/r/hoishin/nodecg
